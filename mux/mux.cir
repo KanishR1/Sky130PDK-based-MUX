@@ -1,0 +1,22 @@
+* /home/kanish/Sky130PDK-based-MUX/mux/mux.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat Oct 22 05:12:43 2022
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC3  Y clkb Vdd Vdd sky130_fd_pr__pfet_01v8_hvt		
+SC4  Vdd clk Y Y sky130_fd_pr__nfet_01v8_lvt		
+SC5  Y clk gnd gnd sky130_fd_pr__pfet_01v8_hvt		
+SC6  gnd clkb Y Y sky130_fd_pr__nfet_01v8_lvt		
+v1  clk gnd pulse		
+v2  Vdd gnd DC		
+SC1  clkb clk Vdd Vdd sky130_fd_pr__pfet_01v8_hvt		
+SC2  clkb clk gnd gnd sky130_fd_pr__nfet_01v8_lvt		
+U1  clk plot_v1		
+U2  clkb plot_v1		
+U3  Y plot_v1		
+scmode1  SKY130mode		
+
+.end

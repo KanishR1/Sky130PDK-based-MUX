@@ -1,0 +1,1 @@
+{"/home/kanish/Sky130PDK-based-MUX/mux": ["mux.proj", "plot_data_v.txt", "mux-cache.lib", "plot_data_i.txt", "mux.sch", "analysis", ".spiceinit", "mux.cir", "mux_Previous_Values.xml", "mux.cir.out", "mux.pro"]}

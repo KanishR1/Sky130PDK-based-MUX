@@ -1,0 +1,33 @@
+* /home/kanish/sky130pdk-based-mux/mux/mux.cir
+
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.lib "/usr/share/local/sky130_fd_pr/models/sky130.lib.spice" tt
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__inductors.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__pnp.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__linear.model.spice"
+xsc3 y clkb vdd vdd sky130_fd_pr__pfet_01v8_hvt 
+xsc4 vdd clk y y sky130_fd_pr__nfet_01v8_lvt 
+xsc5 y clk gnd gnd sky130_fd_pr__pfet_01v8_hvt 
+xsc6 gnd clkb y y sky130_fd_pr__nfet_01v8_lvt 
+v1  clk gnd pulse(0 1.8 0.1m 0.1m 0.1m 2m 4m)
+v2 vdd gnd  dc 1.8
+xsc1 clkb clk vdd vdd sky130_fd_pr__pfet_01v8_hvt 
+xsc2 clkb clk gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+* u1  clk plot_v1
+* u2  clkb plot_v1
+* u3  y plot_v1
+* s c m o d e
+.tran 1e-03 15e-03 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(clk)
+plot v(clkb)
+plot v(y)
+.endc
+.end
