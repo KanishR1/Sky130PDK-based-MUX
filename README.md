@@ -1,6 +1,6 @@
 # Sky130PDK-based-MUX
 ## Table of Contents
-- [Abstract](#abstract)
+- [Introduction](#introduction)
 - [Circuit Details](#circuit-details)
 - [Truth Table](#truth-table)
 - [Software Used](#software-used)
@@ -17,9 +17,11 @@
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-## Abstract
+## Introduction
+A multiplexer is a combinational circuit that has 2^n input lines and a single output line. The binary data is received from the input lines and directed to the output line. On the basis of the values of the selection lines, one of these data inputs will be connected to the output. Multiplexer is an important circuit in both analog and digital domain. One of the import application of mux is line or data selection.
 
 ## Circuit Details
+The 2:1 mux circuit designed in this project uses the pfet and nfet from SKY130PDK. The mux is designed using the transmission gates. The transmission gate is a bidirectional curcuit constructed by connecting the pfet and nfet in parallel. It allows current in either direction. The input to the mux are I0 = gnd and I1 = Vdd. The clk signal is given for the select line. The output of the designed circuit is expected to follow the clk signal. 
 
 ## Truth Table
 The truth table for 2:1 multiplexer is shown below:
