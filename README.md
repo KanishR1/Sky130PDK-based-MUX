@@ -66,35 +66,33 @@ The following figure show the contents in the mux.cir.out :
 The following waveforms are the ngspice plots for the designed circuit :
 
 **Clk Signal**
-![Clk]([https://user-images.githubusercontent.com/88330171/194203796-50213481-34fe-473f-a712-0240bf60a490.png](https://github.com/KanishR1/Sky130PDK-based-MUX/blob/main/output/Clk.png))
+
+![Clk](https://github.com/KanishR1/Sky130PDK-based-MUX/blob/main/output/Clk.png)
 
 **Clk_bar Signal**
-![V0](https://user-images.githubusercontent.com/88330171/194203807-6f3ac675-b99d-447c-8597-1fd9fcf45c29.png)
+
+![Clk_bar](https://github.com/KanishR1/Sky130PDK-based-MUX/blob/main/output/Clk_bar.png)
+
+**Output Signal**
+
+![y](https://github.com/KanishR1/Sky130PDK-based-MUX/blob/main/output/y.png)
 
 **Combined Waveform** </br>
-![ng_spice](https://user-images.githubusercontent.com/88330171/194203837-6d4b0ee1-72b1-4728-b616-96b97f78b0a8.png)
+
+![ngspice_plot](https://github.com/KanishR1/Sky130PDK-based-MUX/blob/main/output/ngspice_plot.png)
 
 ## GAW Plot
 
-![panel](https://user-images.githubusercontent.com/88330171/194677143-ef4e1f53-b7c3-46d0-bcc6-09109b81392c.png)
-
-## Steps to run generate NgVeri Model
-1. Open eSim
-2. Run NgVeri-Makerchip to create a digital block 
-3. Add top level verilog file in Makerchip Tab
-4. Click on NgVeri tab and add dependency files
-5. Click on Run Verilog to NgSpice Converter
-6. Debug if any errors
-7. Model created successfully
+![gaw_plot](https://github.com/KanishR1/Sky130PDK-based-MUX/blob/main/output/gaw_plot.png)
 
 ## Steps to run this project
 1. Open a new terminal
 2. Clone this project using the following command:</br>
-```git clone https://github.com/KanishR1/MOD_10_Sync_Counter_Mixed_sig_SoC.git ```</br>
+```git clone https://github.com/KanishR1/Sky130PDK-based-MUX.git ```</br>
 3. Change directory:</br>
-```cd eSim_project_files/counter_jk_2 ```</br>
+```cd mux ```</br>
 4. Run ngspice:</br>
-```ngspice counter_jk_2.cir.out```</br>
+```ngspice mux.cir.out```</br>
 5. To run the project in eSim:
 
   - Run eSim</br>
@@ -103,15 +101,9 @@ The following waveforms are the ngspice plots for the designed circuit :
 
 ## Acknowlegdements
 1. FOSSEE, IIT Bombay
-2. Steve Hoover, Founder, Redwood EDA
-3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-4. Sumanto Kar, eSim Team, FOSSEE
 
 ## References
 1. Morris Mano & Michael D Ciletti, “Digital Design: With an Introduction to Verilog HDL, 5th Edition, Pearson Education, 2013
 2. Neil H.E. Weste, David Money Harris ―CMOS VLSI Design: A Circuits and Systems Perspective.
 3. https://skywater-pdk.readthedocs.io/en/main/
-4. https://www.homemade-circuits.com/cmos-astable-bistable-monostable-circuits-explained/
-5. https://www.youtube.com/watch?v=M8EqkE4G9IE&ab_channel=SimplyPut
-6. https://github.com/Eyantra698Sumanto/Two-in-One-Low-power-XOR-XNOR-Gate.git
 
